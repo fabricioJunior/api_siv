@@ -1,0 +1,15 @@
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/bin/Debug/net7.0/infra.deps.json
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/bin/Debug/net7.0/infra.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/bin/Debug/net7.0/infra.pdb
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/bin/Debug/net7.0/domain.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/bin/Debug/net7.0/domain.pdb
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.csproj.AssemblyReference.cache
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.AssemblyInfoInputs.cache
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.AssemblyInfo.cs
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.csproj.CoreCompileInputs.cache
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.csproj.CopyComplete
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/refint/infra.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/infra.pdb
+/Users/fabriciojunior/Projects/siv_code_bar_api/infra/obj/Debug/net7.0/ref/infra.dll

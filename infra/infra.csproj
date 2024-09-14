@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\domain\domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="LocalDataAccess\" />
+    <None Remove="Common\" />
+    <None Remove="LocalDataAccess\Repositories\ProdutosRepositories\" />
+    <None Remove="LocalDataAccess\Repositories\ControleDePrecosRepositories\" />
+    <None Remove="RemoteDataAccess\" />
+    <None Remove="DataTransferObjects\" />
+    <None Remove="LocalDataAccess\Repositories\PedidosRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LocalDataAccess\" />
+    <Folder Include="LocalDataAccess\Repositories\" />
+    <Folder Include="Common\" />
+    <Folder Include="LocalDataAccess\Repositories\ProdutosRepositories\" />
+    <Folder Include="LocalDataAccess\Repositories\ControleDePrecosRepositories\" />
+    <Folder Include="RemoteDataAccess\" />
+    <Folder Include="DataTransferObjects\" />
+    <Folder Include="LocalDataAccess\Repositories\PedidosRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+  </ItemGroup>
+</Project>

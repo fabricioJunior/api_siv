@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="features\produtos\" />
+    <None Remove="features\produtos\services\" />
+    <None Remove="features\produtos\repositories\" />
+    <None Remove="features\produtos\Models\" />
+    <None Remove="features\ControleDePrecos\" />
+    <None Remove="Features\Produtos\" />
+    <None Remove="Features\Produtos\Repositories\" />
+    <None Remove="Features\Produtos\Models\" />
+    <None Remove="Features\Produtos\Services\" />
+    <None Remove="Features\ControleDePrecos\Repositories\" />
+    <None Remove="Features\ControleDePrecos\Services\" />
+    <None Remove="Features\ControleDePrecos\Models\" />
+    <None Remove="Features\Pedidos\" />
+    <None Remove="Features\Pedidos\Models\" />
+    <None Remove="Features\Pedidos\Repositories\" />
+    <None Remove="Features\Pedidos\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\ControleDePrecos\" />
+    <Folder Include="Features\Produtos\" />
+    <Folder Include="Features\Produtos\Repositories\" />
+    <Folder Include="Features\Produtos\Models\" />
+    <Folder Include="Features\Produtos\Services\" />
+    <Folder Include="Features\ControleDePrecos\Repositories\" />
+    <Folder Include="Features\ControleDePrecos\Services\" />
+    <Folder Include="Features\ControleDePrecos\Models\" />
+    <Folder Include="Features\Pedidos\" />
+    <Folder Include="Features\Pedidos\Models\" />
+    <Folder Include="Features\Pedidos\Repositories\" />
+    <Folder Include="Features\Pedidos\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig" />
+  </ItemGroup>
+</Project>

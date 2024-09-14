@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/siv_code_bar_api.props" />
+</Project>

@@ -1,0 +1,12 @@
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/bin/Release/net7.0/domain.deps.json
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/bin/Release/net7.0/domain.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/bin/Release/net7.0/domain.pdb
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.csproj.AssemblyReference.cache
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.AssemblyInfoInputs.cache
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.AssemblyInfo.cs
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.csproj.CoreCompileInputs.cache
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/refint/domain.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/domain.pdb
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/obj/Release/net7.0/ref/domain.dll
