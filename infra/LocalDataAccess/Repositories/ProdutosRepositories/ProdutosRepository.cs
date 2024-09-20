@@ -22,7 +22,7 @@
 
         public List<Produto> GetProdutos()
         {
-            var comando = SqlCommand(" select  P.CODBAR, P.CD_PRODUTO, p.TAM, P.COR, P.REFER, p.EST_FISICO,P.DESCRICAO,PRECO.[PRECO], H.[Data] from LJEST_HISTORICO as h inner join  Produtos as p  on p.CODBAR = h.CODBAR INNER JOIN LJTPREI as preco on preco.REFER = p.REFER\nWHERE p.EST_FISICO > 0");            comando.Connection.Open();            List<Produto> resultado = new List<Produto>();            var reader = comando.ExecuteReader();            while (reader.Read())            {
+            var comando = SqlCommand("select  P.CODBAR, P.CD_PRODUTO, p.TAM, P.COR, P.REFER, p.EST_FISICO,P.DESCRICAO,PRECO.[PRECO] from Produtos as P iNNER JOIN LJTPREI as preco on preco.REFER = p.REFER WHERE p.EST_FISICO > 0");            comando.Connection.Open();            List<Produto> resultado = new List<Produto>();            var reader = comando.ExecuteReader();            while (reader.Read())            {
 
 #pragma warning disable CS8604 // Possível argumento de referência nula.
                 var produto = new Produto(

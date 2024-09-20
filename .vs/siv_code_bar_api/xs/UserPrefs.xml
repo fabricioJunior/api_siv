@@ -1,14 +1,22 @@
-﻿<Properties StartupConfiguration="{A155B9F1-D88B-4111-8AEA-8E2B642A0755}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="domain/Features/Produtos/Models/Produto.cs">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{A155B9F1-D88B-4111-8AEA-8E2B642A0755}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="infra/LocalDataAccess/Repositories/ProdutosRepositories/ProdutosRepository.cs">
     <Files>
-      <File FileName="infra/Common/SqlConnectionRepositoryBase.cs" />
-      <File FileName="siv_code_bar_api/Controllers/ProdutosController.cs" Line="27" Column="91" />
-      <File FileName="infra/LocalDataAccess/Repositories/ProdutosRepositories/ProdutosRepository.cs" Line="40" Column="23" />
-      <File FileName="domain/Features/Produtos/Models/Produto.cs" Line="12" Column="24" />
-      <File FileName="domain/Features/Produtos/Services/ProdutosServices.cs" />
-      <File FileName="domain/Features/Produtos/Repositories/IProdutosRepository.cs" />
-      <File FileName="infra/LocalDataAccess/Repositories/PedidosRepositories/PedidosRepository.cs" />
+      <File FileName="infra/Common/SqlConnectionRepositoryBase.cs" Line="21" Column="10" NotebookId="1" />
+      <File FileName="infra/LocalDataAccess/Repositories/ProdutosRepositories/ProdutosRepository.cs" Line="76" Column="1" NotebookId="1" />
+      <File FileName="domain/Features/Produtos/Models/Produto.cs" Line="12" Column="24" NotebookId="1" />
+      <File FileName="domain/Features/Produtos/Services/ProdutosServices.cs" NotebookId="1" />
+      <File FileName="domain/Features/Produtos/Repositories/IProdutosRepository.cs" NotebookId="1" />
+      <File FileName="infra/LocalDataAccess/Repositories/PedidosRepositories/PedidosRepository.cs" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="994" Y="641" Width="947" Height="428">
+        <Files>
+          <File FileName="siv_code_bar_api/Controllers/ProdutosController.cs" Line="27" Column="91" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -26,9 +34,7 @@
                   <Node name="Services" expanded="True" />
                 </Node>
                 <Node name="Produtos" expanded="True">
-                  <Node name="Models" expanded="True">
-                    <Node name="Produto.cs" selected="True" />
-                  </Node>
+                  <Node name="Models" expanded="True" />
                   <Node name="Repositories" expanded="True" />
                   <Node name="Services" expanded="True" />
                 </Node>
@@ -39,8 +45,11 @@
               <Node name="DataTransferObjects" expanded="True" />
               <Node name="LocalDataAccess" expanded="True">
                 <Node name="Repositories" expanded="True">
+                  <Node name="ControleDePrecosRepositories" expanded="True" />
                   <Node name="PedidosRepositories" expanded="True" />
-                  <Node name="ProdutosRepositories" expanded="True" />
+                  <Node name="ProdutosRepositories" expanded="True">
+                    <Node name="ProdutosRepository.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
               <Node name="RemoteDataAccess" expanded="True" />
@@ -51,10 +60,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.ItemProperties.api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
