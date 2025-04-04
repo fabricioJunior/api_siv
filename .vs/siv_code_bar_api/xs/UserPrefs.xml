@@ -1,65 +1,57 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{A155B9F1-D88B-4111-8AEA-8E2B642A0755}|https">
-  <MultiItemStartupConfigurations />
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{A155B9F1-D88B-4111-8AEA-8E2B642A0755}|http">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="infra/LocalDataAccess/Repositories/ProdutosRepositories/ProdutosRepository.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="siv_code_bar_api/Program.cs">
     <Files>
-      <File FileName="infra/Common/SqlConnectionRepositoryBase.cs" Line="21" Column="10" NotebookId="1" />
-      <File FileName="infra/LocalDataAccess/Repositories/ProdutosRepositories/ProdutosRepository.cs" Line="76" Column="1" NotebookId="1" />
-      <File FileName="domain/Features/Produtos/Models/Produto.cs" Line="12" Column="24" NotebookId="1" />
-      <File FileName="domain/Features/Produtos/Services/ProdutosServices.cs" NotebookId="1" />
-      <File FileName="domain/Features/Produtos/Repositories/IProdutosRepository.cs" NotebookId="1" />
-      <File FileName="infra/LocalDataAccess/Repositories/PedidosRepositories/PedidosRepository.cs" NotebookId="1" />
+      <File FileName="infra/LocalDataAccess/Repositories/ProdutosRepositories/ProdutosRepository.cs" Line="35" Column="38" />
+      <File FileName="infra/LocalDataAccess/Repositories/PedidosRepositories/ProdutoPedidoRepository.cs" />
+      <File FileName="siv_code_bar_api/Controllers/ProdutosController.cs" Line="1" Column="1" />
+      <File FileName="siv_code_bar_api/Controllers/PrecosController.cs" />
+      <File FileName="siv_code_bar_api/Controllers/PessoasController.cs" />
+      <File FileName="domain/Features/Pedidos/Services/PedidosService.cs" />
+      <File FileName="infra/LocalDataAccess/Repositories/PedidosRepositories/PedidosRepository.cs" />
+      <File FileName="domain/Features/Produtos/Services/ProdutosServices.cs" />
+      <File FileName="domain/Features/Produtos/Models/Produto.cs" />
+      <File FileName="siv_code_bar_api/injections/injection.cs" />
+      <File FileName="siv_code_bar_api/Program.cs" Line="48" Column="1" />
+      <File FileName="siv_code_bar_api/appsettings.json" Line="1" Column="1" />
+      <File FileName="siv_code_bar_api/Properties/launchSettings.json" Line="20" Column="28" />
+      <File FileName="siv_code_bar_api/Controllers/HomeController.cs" Line="14" Column="25" />
+      <File FileName="siv_code_bar_api/Controllers/ProdutosPedidoController.cs" Line="26" Column="2" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="994" Y="641" Width="947" Height="428">
-        <Files>
-          <File FileName="siv_code_bar_api/Controllers/ProdutosController.cs" Line="27" Column="91" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="siv_code_bar_api" expanded="True">
-            <Node name="api" expanded="True">
+            <Node name="api">
               <Node name="Controllers" expanded="True" />
               <Node name="injections" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
-            <Node name="domain" expanded="True">
+            <Node name="domain">
               <Node name="Features" expanded="True">
-                <Node name="Pedidos" expanded="True">
-                  <Node name="Models" expanded="True" />
-                  <Node name="Repositories" expanded="True" />
-                  <Node name="Services" expanded="True" />
-                </Node>
+                <Node name="Pedidos" expanded="True" />
                 <Node name="Produtos" expanded="True">
-                  <Node name="Models" expanded="True" />
-                  <Node name="Repositories" expanded="True" />
                   <Node name="Services" expanded="True" />
                 </Node>
               </Node>
             </Node>
-            <Node name="infra" expanded="True">
-              <Node name="Common" expanded="True" />
-              <Node name="DataTransferObjects" expanded="True" />
+            <Node name="infra">
               <Node name="LocalDataAccess" expanded="True">
                 <Node name="Repositories" expanded="True">
-                  <Node name="ControleDePrecosRepositories" expanded="True" />
                   <Node name="PedidosRepositories" expanded="True" />
-                  <Node name="ProdutosRepositories" expanded="True">
-                    <Node name="ProdutosRepository.cs" selected="True" />
-                  </Node>
+                  <Node name="ProdutosRepositories" expanded="True" />
                 </Node>
               </Node>
-              <Node name="RemoteDataAccess" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.ItemProperties.api PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

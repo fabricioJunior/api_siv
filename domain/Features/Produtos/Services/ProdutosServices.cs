@@ -8,10 +8,12 @@ namespace domain.Features.Produtos.Services
 	{
 
 		private readonly IProdutosRepository _produtosRepository;
+		private readonly IProdutoPedidoRespository _produtoPedidoRepository;
 
-		public ProdutosService(IProdutosRepository produtosRepository)
+		public ProdutosService(IProdutosRepository produtosRepository, IProdutoPedidoRespository produtoPedidoRespository)
 		{
 			_produtosRepository = produtosRepository;
+			_produtoPedidoRepository = produtoPedidoRespository;
 		}
 
 		public List<Produto> recuperarProdutosPelaReferencia( string referencia) {
@@ -44,6 +46,9 @@ namespace domain.Features.Produtos.Services
             return _produtosRepository.GetProdutos();
         }
 
+	   public List<ProdutoPedido> GetProdutoPedidos(DateTime inicio, DateTime final) {
+			return _produtoPedidoRepository.GetProdutoPedidos(inicio, final);
+		}
 
     }
 }

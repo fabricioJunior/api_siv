@@ -37,8 +37,11 @@ namespace api.injections
 		{
 			//repositories
 			_services.AddScoped<IProdutosRepository, ProdutosRepository>();
+			_services.AddScoped<IProdutoPedidoRespository, ProdutoPedidoRepository>();
 			//services
 			_services.AddScoped<ProdutosService, ProdutosService>();
+
+
 
 		}
 

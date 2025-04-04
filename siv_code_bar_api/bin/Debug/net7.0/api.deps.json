@@ -528,7 +528,10 @@
       },
       "domain/1.0.0": {
         "runtime": {
-          "domain.dll": {}
+          "domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "infra/1.0.0": {
@@ -538,7 +541,10 @@
           "domain": "1.0.0"
         },
         "runtime": {
-          "infra.dll": {}
+          "infra.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

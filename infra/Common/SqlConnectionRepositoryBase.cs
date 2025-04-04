@@ -11,7 +11,7 @@ namespace infra.Common
 
         private SqlConnection Connection()
         {
-            return new SqlConnection("Data Source=PORONDEFLOR\\SQLEXPRESS;Database=siv;Integrated Security=false;User ID=sa;Password=44668822;Encrypt=false;TrustServerCertificate=True");
+            return new SqlConnection("Data Source=192.168.191.1\\SQLEXPRESS;Database=siv;Integrated Security=false;User ID=sa;Password=44668822;Encrypt=false;TrustServerCertificate=True");
         }
 
         protected SqlCommand SqlCommand(string query)
