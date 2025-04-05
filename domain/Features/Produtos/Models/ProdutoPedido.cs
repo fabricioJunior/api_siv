@@ -4,16 +4,18 @@ namespace domain.Features.Produtos.Models
 	public class ProdutoPedido
 	{
 
-		public int pedido { get; set; }
+		public int idPedido { get; set; }
 		public double desconto { get; set; }
 		public string descricao { get; set; }
 		public string tamanho { get; set; }
 		public string cor { get; set; }
-		public double preco { get; set; }
+		public double valor { get; set; }
 		public string formaDePagamento { get; set; }
 		public int quantidade { get; set; } 
 
 		public string codigoDeBarras{ get;set;}
+
+		public string dsrefer { get; set; }
 
 		public ProdutoPedido(
 			int pedido,
@@ -21,21 +23,23 @@ namespace domain.Features.Produtos.Models
 			string descricao,
 			string tamanho,
 			string cor,
-			double preco,
+			double valor,
 			string formaDePagamento,
 			int quantidade,
-			string  codigoDeBarras
+			string  codigoDeBarras,
+			string dsrefer
 			)
 		{
-			this.pedido = pedido;
+			this.idPedido = pedido;
 			this.desconto = desconto;
 			this.descricao = descricao;
 			this.tamanho = tamanho;
 			this.cor = cor;
-			this.preco = preco;
+			this.valor = valor;
 			this.formaDePagamento = formaDePagamento;
 			this.quantidade = quantidade;
 			this.codigoDeBarras = codigoDeBarras;
+			this.dsrefer = dsrefer;
 		}
 
     
