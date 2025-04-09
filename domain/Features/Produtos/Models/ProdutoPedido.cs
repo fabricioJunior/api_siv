@@ -10,10 +10,9 @@ namespace domain.Features.Produtos.Models
 		public string tamanho { get; set; }
 		public string cor { get; set; }
 		public double valor { get; set; }
-		public string formaDePagamento { get; set; }
-		public int quantidade { get; set; } 
+		public int quantidade { get; set; }
 
-		public string codigoDeBarras{ get;set;}
+		public string codigoDeBarras { get; set; }
 
 		public string dsrefer { get; set; }
 
@@ -24,9 +23,8 @@ namespace domain.Features.Produtos.Models
 			string tamanho,
 			string cor,
 			double valor,
-			string formaDePagamento,
 			int quantidade,
-			string  codigoDeBarras,
+			string codigoDeBarras,
 			string dsrefer
 			)
 		{
@@ -36,13 +34,12 @@ namespace domain.Features.Produtos.Models
 			this.tamanho = tamanho;
 			this.cor = cor;
 			this.valor = valor;
-			this.formaDePagamento = formaDePagamento;
 			this.quantidade = quantidade;
 			this.codigoDeBarras = codigoDeBarras;
 			this.dsrefer = dsrefer;
 		}
 
-    
-    }
+
+	}
 }
 

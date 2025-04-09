@@ -4,9 +4,9 @@ using domain.Features.Pedidos;
 
 namespace infra.DataTransferObjects
 {
-	public class PedidoNFC
-	{
-      
+    public class PedidoNFC
+    {
+
         public int pagamento { get; private set; }
         public int presenca { get; private set; }
         public int modalidade_frete { get; set; }
@@ -28,14 +28,15 @@ namespace infra.DataTransferObjects
             this.valor_pagamento = valorPagamento;
         }
 
-        public PedidoNFC(Pedido pedido) {
+        public PedidoNFC(Pedido pedido)
+        {
             presenca = 1;
             modalidade_frete = 9;
             frete = "0";
-            desconto = pedido.Desconto.ToString(); //TODO: Verificar formatação
-            total = pedido.ValorTotal.ToString(); // TODO: Verificar formatação
-            forma_pagamento = pedido.FormaDePagamento.ToString(); //TODO: Verificar dado
-            valor_pagamento = pedido.ValorTotal.ToString(); //TODO: Verificar formatação
+            // desconto = pedido.Desconto.ToString(); //TODO: Verificar formatação
+            // total = pedido.ValorTotal.ToString(); // TODO: Verificar formatação
+            // forma_pagamento = pedido.FormaDePagamento.ToString(); //TODO: Verificar dado
+            // valor_pagamento = pedido.ValorTotal.ToString(); //TODO: Verificar formatação
         }
 
     }

@@ -38,7 +38,6 @@ namespace infra.LocalDataAccess.Repositories.PedidosRepositories
                     tamanho: reader["TAM"].ToString(),
                     cor: reader["COR"].ToString(),
                     valor: double.Parse(reader["PRECO"].ToString()),
-                    formaDePagamento : reader["FORPAG"].ToString(),
                     quantidade: int.Parse(reader["QTD"].ToString()),
                     codigoDeBarras: reader["CODBAR"].ToString(),
                     dsrefer: reader["DS_REFER"].ToString()

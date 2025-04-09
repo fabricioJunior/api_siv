@@ -17,7 +17,7 @@ namespace infra.LocalDataAccess.Repositories.PedidosRepositories
         public NFCRepository(
             NFCWebManiaRemoteDataSource nFCWebManiaRemoteDataSource
             )
-		{
+        {
             this.nFCWebManiaRemoteDataSource = nFCWebManiaRemoteDataSource;
 
         }
@@ -26,7 +26,7 @@ namespace infra.LocalDataAccess.Repositories.PedidosRepositories
         {
             var produtosNFC = ProdutoNFCs(produtos);
             var pedidoNFC = new PedidoNFC(pedido);
-            var novaNFC = new NFC(pedido.Id, null, 1,"Venda de produção do estabelecimento",2,1,ambiente, null,produtosNFC,pedidoNFC);
+            var novaNFC = new NFC(pedido.id, null, 1, "Venda de produção do estabelecimento", 2, 1, ambiente, null, produtosNFC, pedidoNFC);
 
             return nFCWebManiaRemoteDataSource.PostNFC(novaNFC);
         }
@@ -36,12 +36,23 @@ namespace infra.LocalDataAccess.Repositories.PedidosRepositories
             throw new NotImplementedException();
         }
 
-        private List<ProdutoNFC> ProdutoNFCs(List<ProdutoDoPedido> produtos) {
+        private List<ProdutoNFC> ProdutoNFCs(List<ProdutoDoPedido> produtos)
+        {
             var nfcs = produtos.Select(x => new ProdutoNFC(x));
-            return nfcs.ToList(); 
+            return nfcs.ToList();
         }
 
         private PedidoNFC PedidoNFC(Pedido pedido) => new PedidoNFC(pedido);
+
+        public string NovaNFC(domain.Features.Pedidos.Pedido pedido, List<ProdutoDoPedido> produtos)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string NovasNFCs(List<domain.Features.Pedidos.Pedido> pedidos)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

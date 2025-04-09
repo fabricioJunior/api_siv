@@ -24,11 +24,12 @@ namespace api.injections
 		}
 
 
-		public  void RegisterInjections()
+		public void RegisterInjections()
 		{
 			ProdutosInjections();
 			ControleDePrecosInjections();
 			PessoasInjections();
+			_services.AddScoped<IPedidoNFRepository, PedidoNFReposistory>();
 			//PedidosInjections();
 		}
 
@@ -57,17 +58,17 @@ namespace api.injections
 		private void PessoasInjections()
 		{
 			//repositories
-            _services.AddScoped<IPessoaRepository, PessoaRepository>();
+			_services.AddScoped<IPessoaRepository, PessoaRepository>();
 			//services
-            _services.AddScoped<PessoasService>();
+			_services.AddScoped<PessoasService>();
 
-        }
+		}
 
 		private void PedidosInjections()
 		{
 
 			//repositories
-			_services.AddScoped<IPedidosRepository,PedidosRepository>();
+			_services.AddScoped<IPedidosRepository, PedidosRepository>();
 			_services.AddScoped<INFCRepository, NFCRepository>();
 			//services
 			_services.AddScoped<PedidosService>();
@@ -78,6 +79,6 @@ namespace api.injections
 		}
 
 
-    }
+	}
 }
 
