@@ -1,0 +1,3 @@
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/bin/Debug/net7.0/publish/domain.dll
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/bin/Debug/net7.0/publish/domain.deps.json
+/Users/fabriciojunior/Projects/siv_code_bar_api/domain/bin/Debug/net7.0/publish/domain.pdb

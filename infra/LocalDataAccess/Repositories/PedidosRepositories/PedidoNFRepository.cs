@@ -107,7 +107,22 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
         List<Pedido> pedidos = new List<Pedido>();
         foreach (var idPedido in idPedidosDoDia)
         {
-            pedidos.Add(GetPedido(idPedido));
+            var pedido = GetPedido(idPedido);
+            ;
+            if (pedido.produtos.Sum((produto) => produto.quantidade) == 0)
+            {
+                continue;
+            }
+
+            if (pedido!.pagamentos.Where((pagamento) => pagamento.FormaDePagamento == "CREDITO DE DEVOLUCAO").Count() == 0)
+            {
+                continue;
+            }
+            {
+                pedido.pagamentos.Add(new Pagamento("DINHEIRO", pedido.total));
+
+            }
+
         }
         return pedidos;
     }
