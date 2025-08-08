@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using domain.Features.Produtos.Models;
 
 public class Pedido

@@ -4,11 +4,11 @@ using infra.Common;
 
 public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoNFRepository
 {
-    public Pedido GetPedido(int id)
+    public Pedido GetPedido(int id, bool produtosDoPagamento = false)
     {
         var taxa = TaxaDeEntrega(id);
         var pagamentos = Pagamentos(id);
-        var produtos = GetProdutoPedidos(id);
+        var produtos = produtosDoPagamento ? GetProdutoPedidosPagamento(id) : GetProdutoPedidos(id);
         var desconto = produtos.Sum(x => x.desconto);
         var total = pagamentos.Sum(x => x.valor);
         return new Pedido(id, total, desconto, taxa, produtos, pagamentos);
@@ -17,7 +17,7 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
     private List<ProdutoPedido> GetProdutoPedidos(int idPedido)
     {
 
-        var comando = SqlCommand(@"SELECT * FROM View_Romaneio_Items WHERE  PEDIDO = @idPedido AND TIPO = 'V' AND CONFIRMADO =1 AND PAGO = 1");
+        var comando = SqlCommand(@"SELECT * FROM LJPECAS_PEDIDO as pe INNER JOIN Produtos as p on p.CODBAR = pe.CODBAR WHERE PEDIDO = @idPedido");
         comando.Parameters.AddWithValue("@idPedido", idPedido);
         comando.Connection.Open();
 
@@ -29,7 +29,7 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
 
             var produto = new ProdutoPedido(
                 pedido: int.Parse(reader["PEDIDO"].ToString()),
-                desconto: double.Parse(reader["DESCONTO"].ToString()),
+                desconto: double.Parse(reader["DESCONTO"]?.ToString() ?? "0"),
                 descricao: reader["DESCRICAO"].ToString(),
                 tamanho: reader["TAM"].ToString(),
                 cor: reader["COR"].ToString(),
@@ -47,6 +47,40 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
         comando.Connection.Close();
         return resultado;
     }
+    private List<ProdutoPedido> GetProdutoPedidosPagamento(int idPedido)
+    {
+
+        var comando = SqlCommand(@"SELECT * FROM View_Romaneio_Items WHERE  PEDIDO = @idPedido AND TIPO = 'V' AND CONFIRMADO =1 AND PAGO = 1");
+        comando.Parameters.AddWithValue("@idPedido", idPedido);
+        comando.Connection.Open();
+
+        List<ProdutoPedido> resultado = new List<ProdutoPedido>();
+        var reader = comando.ExecuteReader();
+        while (reader.Read())
+        {
+#pragma warning disable CS8604 // Possível argumento de referência nula.
+
+            var produto = new ProdutoPedido(
+                pedido: int.Parse(reader["PEDIDO"].ToString()),
+                desconto: double.Parse(reader["DESCONTO"]?.ToString() ?? "0"),
+                descricao: reader["DESCRICAO"].ToString(),
+                tamanho: reader["TAM"].ToString(),
+                cor: reader["COR"].ToString(),
+                valor: double.Parse(reader["PRECO"].ToString()),
+                quantidade: int.Parse(reader["QTD"].ToString()),
+                codigoDeBarras: reader["CODBAR"].ToString(),
+                dsrefer: reader["DS_REFER"].ToString()
+                );
+
+            resultado.Add(produto);
+
+#pragma warning disable CS8604 // Possível argumento de referência nula.
+
+        }
+        comando.Connection.Close();
+        return resultado;
+    }
+
 
     private List<Pagamento> Pagamentos(int idPedido)
     {
@@ -107,7 +141,7 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
         List<Pedido> pedidos = new List<Pedido>();
         foreach (var idPedido in idPedidosDoDia)
         {
-            var pedido = GetPedido(idPedido);
+            var pedido = GetPedido(idPedido, produtosDoPagamento: true);
             ;
             if (pedido.produtos.Sum((produto) => produto.quantidade) == 0)
             {

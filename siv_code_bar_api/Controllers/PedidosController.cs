@@ -15,10 +15,15 @@ public class PedidosController : ControllerBase
         this._pedidosNFRepository = pedidosNFRepository;
     }
 
-    [HttpGet(Name = "GetPedidosDoDia")]
+    [HttpGet()]
     public List<Pedido> GetProdutos()
     {
         return _pedidosNFRepository.GetPedidosDoDia();
+    }
+    [HttpGet("/{idPedido}")]
+    public Pedido GetPedido(int idPedido)
+    {
+        return _pedidosNFRepository.GetPedido(idPedido);
     }
 
 

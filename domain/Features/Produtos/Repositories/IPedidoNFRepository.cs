@@ -1,5 +1,8 @@
-public interface IPedidoNFRepository { 
-   List<Pedido> GetPedidosDoDia(); 
+using System.Collections.Generic;
 
-   Pedido GetPedido(int id);
+public interface IPedidoNFRepository
+{
+   List<Pedido> GetPedidosDoDia();
+
+   Pedido GetPedido(int id, bool produtosDoPagamento = false);
 }
