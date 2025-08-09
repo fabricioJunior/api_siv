@@ -9,7 +9,8 @@ public class Pedido
     double desconto,
     double? taxaDeEntrega,
     List<ProdutoPedido> produtos,
-    List<Pagamento> pagamentos
+    List<Pagamento> pagamentos,
+    PessoaNF pessoa
   )
   {
     this.id = id;
@@ -18,6 +19,7 @@ public class Pedido
     this.produtos = produtos;
     this.pagamentos = pagamentos;
     this.desconto = desconto;
+    this.pessoa = pessoa;
   }
 
   public int id { get; set; }
@@ -31,4 +33,6 @@ public class Pedido
   public List<ProdutoPedido> produtos { get; set; }
 
   public List<Pagamento> pagamentos { get; set; }
+
+  public PessoaNF? pessoa { get; set; }
 }

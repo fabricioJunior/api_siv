@@ -11,9 +11,30 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
         var produtos = produtosDoPagamento ? GetProdutoPedidosPagamento(id) : GetProdutoPedidos(id);
         var desconto = produtos.Sum(x => x.desconto);
         var total = pagamentos.Sum(x => x.valor);
-        return new Pedido(id, total, desconto, taxa, produtos, pagamentos);
+        var pessoa = GetPessoa(id);
+        return new Pedido(id, total, desconto, taxa, produtos, pagamentos, pessoa);
     }
 
+    private PessoaNF GetPessoa(int idPedido)
+    {
+        var comando = SqlCommand(@"select * from LJPEDIDOS as p inner join LJCLI as cli on cli.ID = p.CLIENTE WHERE p.ID = @idPedido ");
+        comando.Parameters.AddWithValue("@idPedido", idPedido);
+        comando.Connection.Open();
+        var reader = comando.ExecuteReader();
+        PessoaNF? pessoa = null;
+        while (reader.Read())
+        {
+#pragma warning disable CS8604 // Possible null reference argument.
+            pessoa = new PessoaNF(
+             reader["nome"].ToString(),
+             reader["cpf"].ToString()
+            );
+#pragma warning restore CS8604 // Possible null reference argument.
+
+        }
+        comando.Connection.Close();
+        return pessoa;
+    }
     private List<ProdutoPedido> GetProdutoPedidos(int idPedido)
     {
 
