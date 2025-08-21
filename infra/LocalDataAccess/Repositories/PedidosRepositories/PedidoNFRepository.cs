@@ -146,6 +146,7 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
     {
 
         // 
+        //var comando = SqlCommand(@"SELECT * FROM LJPEDIDOS where  TIPO = 'V' AND CONFIRMADO = 1 AND PAGO = 1 AND [DATA] BETWEEN '2025-08-08' AND  '2025-08-22'");
         var comando = SqlCommand(@"SELECT * FROM LJPEDIDOS where  TIPO = 'V' AND CONFIRMADO = 1 AND PAGO = 1 AND [DATA] >= DATEADD(DAY, 0, DATEDIFF(DAY, 0, CURRENT_TIMESTAMP)) AND [DATA] <  DATEADD(DAY, 1, DATEDIFF(DAY, 0, CURRENT_TIMESTAMP))");
         comando.Connection.Open();
         var reader = comando.ExecuteReader();
@@ -163,21 +164,12 @@ public class PedidoNFReposistory : SqlConnectionRepositoryBase<Pedido>, IPedidoN
         foreach (var idPedido in idPedidosDoDia)
         {
             var pedido = GetPedido(idPedido, produtosDoPagamento: true);
-            ;
+
             if (pedido.produtos.Sum((produto) => produto.quantidade) == 0)
             {
                 continue;
             }
-
-            if (pedido!.pagamentos.Where((pagamento) => pagamento.FormaDePagamento == "CREDITO DE DEVOLUCAO").Count() == 0)
-            {
-                continue;
-            }
-            {
-                pedido.pagamentos.Add(new Pagamento("DINHEIRO", pedido.total));
-
-            }
-
+            pedidos.Add(pedido);
         }
         return pedidos;
     }
